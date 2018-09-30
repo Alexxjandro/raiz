@@ -15,6 +15,7 @@ body {
 a {
   text-decoration:none;
   transition:all 400ms ease-in-out;
+  width: 50%;
 }
 /* ==== Related Post Widget Start ==== */
 
@@ -34,14 +35,17 @@ a {
   margin:0;
   padding:0;
   list-style:none;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
 }
 .related-post-style-2 li {
   background-color: #fff;
-   display: block;
+   display: inline-flex;
    padding:0;
     float: none;
     overflow: hidden;
-    margin:0 0 8px;
+    margin:0 0 10px;
 	list-style:none;
 }
 .related-post-style-2 li:hover .related-post-item-thumbnail{
@@ -49,7 +53,7 @@ a {
 }
 .related-post-style-2 li a:hover {color:#777}
 .related-post-style-2 .related-post-item-thumbnail {
-  width:168px;
+  width: 100%;
   height:100px;
   max-width:none;
   max-height:none;
@@ -61,20 +65,17 @@ a {
   transition:all 400ms ease-in-out;
 }
 .related-post-style-2 .related-post-item-title {
-  font-weight:500;
-    display: block;
-    display: -webkit-box;
-	margin-top:-2px;
-	margin-bottom:5px;
-	line-height:1.1;
+  font-weight: bold;
+  display: block;
+  line-height: 1.1;
+  font-size: 18px;
+  color: #000;
+  margin: 0 10px 0 10px;
+  box-sizing: border-box;
+  font-family: roboto;
 }
 .related-post-style-2 .related-post-item-more,.related-post-style-2 .related-post-item-summary,.related-post-style-2 .related-post-item-more,.related-post-style-2 .related-post-item-summary a{
   display:none;
-}
-.elpepete{
-  width: 100%;
-  height: 200px;
-  background: #000;
 }
 @media screen and (max-width:600px){.related-post-style-2 .related-post-item-summary {display:none;}
 }
@@ -84,9 +85,6 @@ a {
 <body>
 
 <div id="related-post" class="related-post">
-<div class="elpepete">
-
-</div>
 
 
 </div>
@@ -115,7 +113,7 @@ function getQueryVariable(variable) {
   })();
 var relatedPostConfig = {
 		homePage: getQueryVariable("url"),
-        numPosts: 6,
+        numPosts: 10,
         summaryLength: 200,
         widgetStyle: 2
     };
